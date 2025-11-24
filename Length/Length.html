@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleLength.css">
+</head>
+<body>
+    <h1>Length Convertor</h1>
+    <div id="container">
+        <input id="numInput"><br><br>
+        <select id="firstLengthChoice">
+            <option value="Inch">Inch</option>
+            <option value="Foot">Foot</option>
+            <option value="Yard">Yard</option>
+            <option value="Mile">Mile</option>
+            <option value="MM">Millimeter</option>
+            <option value="CM">Centimeter</option>
+            <option value="Meter">Meter</option>
+            <option value="KM">Kilometer</option>
+        </select>
+        <p>To:</p>
+        <select id="secondLengthChoice">
+            <option value="Inch">Inch</option>
+            <option value="Foot">Foot</option>
+            <option value="Yard">Yard</option>
+            <option value="Mile">Mile</option>
+            <option value="MM">Millimeter</option>
+            <option value="CM">Centimeter</option>
+            <option value="Meter">Meter</option>
+            <option value="KM">Kilometer</option>
+        </select><br><br>
+
+        
+
+        <button id="submit">Submit</button>
+
+        <p id="display"></p>
+
+        <script>
+            const firstLengthChoice = document.getElementById("firstLengthChoice");
+const secondLengthChoice = document.getElementById("secondLengthChoice");
+const submit = document.getElementById("submit");
+const display = document.getElementById("display");
+const numInput = document.getElementById("numInput");
+
+submit.onclick = function () {
+    const val = Number(numInput.value);
+    let changedLength = 0;
+
+    console.log("LOADED")
+
+    switch (firstLengthChoice.value) {
+
+        // ------------------ INCH ------------------
+        case "Inch":
+            switch (secondLengthChoice.value) {
+                case "Inch": changedLength = val; break;
+                case "Foot": changedLength = val / 12; break;
+                case "Yard": changedLength = val / 36; break;
+                case "Mile": changedLength = val / 63360; break;
+                case "MM":   changedLength = val * 25.4; break;
+                case "CM":   changedLength = val * 2.54; break;
+                case "Meter": changedLength = val / 39.37; break;
+                case "KM":   changedLength = val / 39370; break;
+            }
+            break;
+
+        // ------------------ FOOT ------------------
+        case "Foot":
+            switch (secondLengthChoice.value) {
+                case "Inch": changedLength = val * 12; break;
+                case "Foot": changedLength = val; break;
+                case "Yard": changedLength = val / 3; break;
+                case "Mile": changedLength = val / 5280; break;
+                case "MM":   changedLength = val * 304.8; break;
+                case "CM":   changedLength = val * 30.48; break;
+                case "Meter": changedLength = val / 3.281; break;
+                case "KM":   changedLength = val / 3281; break;
+            }
+            break;
+
+        // ------------------ YARD ------------------
+        case "Yard":
+            switch (secondLengthChoice.value) {
+                case "Inch": changedLength = val * 36; break;
+                case "Foot": changedLength = val * 3; break;
+                case "Yard": changedLength = val; break;
+                case "Mile": 
+                    changedLength = val / 1760; 
+                    break;
+                case "MM":   changedLength = val * 914.4; break;
+                case "CM":   changedLength = val * 91.44; break;
+                case "Meter": changedLength = val / 1.094; break;
+                case "KM":   changedLength = val / 1094; break;
+            }
+            break;
+
+        // ------------------ MILE ------------------
+        case "Mile":
+            switch (secondLengthChoice.value) {
+                case "Inch": changedLength = val * 63360; break;
+                case "Foot": changedLength = val * 5280; break;
+                case "Yard": changedLength = val * 1760; break;
+                case "Mile": changedLength = val; break;
+                case "MM":   changedLength = val * 1.609e6; break;
+                case "CM":   changedLength = val * 160900; break;
+                case "Meter": changedLength = val * 1609; break;
+                case "KM":   changedLength = val * 1.609; break;
+            }
+            break;
+
+        // ------------------ MILLIMETER ------------------
+        case "MM":
+            switch (secondLengthChoice.value) {
+                case "Inch": changedLength = val / 25.4; break;
+                case "Foot": changedLength = val / 304.8; break;
+                case "Yard": changedLength = val / 914.4; break;
+                case "Mile": changedLength = val / 1.609e6; break;
+                case "MM":   changedLength = val; break;
+                case "CM":   changedLength = val / 10; break;
+                case "Meter": changedLength = val / 1000; break;
+                case "KM":   changedLength = val / 1e6; break;
+            }
+            break;
+
+        // ------------------ CENTIMETER ------------------
+        case "CM":
+            switch (secondLengthChoice.value) {
+                case "Inch": changedLength = val / 2.54; break;
+                case "Foot": changedLength = val / 30.48; break;
+                case "Yard": changedLength = val / 91.44; break;
+                case "Mile": changedLength = val / 160900; break;
+                case "MM":   changedLength = val * 10; break;
+                case "CM":   changedLength = val; break;
+                case "Meter": changedLength = val / 100; break;
+                case "KM":   changedLength = val / 100000; break;
+            }
+            break;
+
+        // ------------------ METER ------------------
+        case "Meter":
+            switch (secondLengthChoice.value) {
+                case "Inch": changedLength = val * 39.37; break;
+                case "Foot": changedLength = val * 3.281; break;
+                case "Yard": changedLength = val * 1.094; break;
+                case "Mile": changedLength = val / 1609; break;
+                case "MM":   changedLength = val * 1000; break;
+                case "CM":   changedLength = val * 100; break;
+                case "Meter": changedLength = val; break;
+                case "KM":   changedLength = val / 1000; break;
+            }
+            break;
+
+        // ------------------ KILOMETER ------------------
+        case "KM":
+            switch (secondLengthChoice.value) {
+                case "Inch": changedLength = val * 39370; break;
+                case "Foot": changedLength = val * 3281; break;
+                case "Yard": changedLength = val * 1094; break;
+                case "Mile": changedLength = val / 1.609; break;
+                case "MM":   changedLength = val * 1e6; break;
+                case "CM":   changedLength = val * 100000; break;
+                case "Meter": changedLength = val * 1000; break;
+                case "KM":   changedLength = val; break;
+            }
+            break;
+    }
+
+    display.textContent = changedLength;
+};
+        </script>
+    </div>
+</body>
+</html>
