@@ -1,0 +1,36 @@
+body{
+    text-align: center;
+    font-size: 2rem;
+}
+#container{
+    background: hsl(0, 2%, 57%);    
+    border: none;
+    border-radius: 25px;
+    width: 90%;
+    height: 90%;
+    margin-left: 50px;
+    box-shadow: 5px 5px 10px 2px;
+}
+button{
+    font-size: 4rem;
+    background-color: hsl(180, 100%, 50%);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+input{
+    font-size: 2rem;
+}
+label{
+    color: white;
+}
+select{
+    font-size: 2rem;
+}
+#Display{
+    font-size: 4rem;
+    color: white;
+}
+.tempBtn:active{
+    background-color: hsl(180, 100%, 40%);
+}
