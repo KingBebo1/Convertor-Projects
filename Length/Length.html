@@ -53,7 +53,7 @@ submit.onclick = function () {
 
     switch (firstLengthChoice.value) {
 
-        // ------------------ INCH ------------------
+    
         case "Inch":
             switch (secondLengthChoice.value) {
                 case "Inch": changedLength = val; break;
@@ -67,7 +67,7 @@ submit.onclick = function () {
             }
             break;
 
-        // ------------------ FOOT ------------------
+       
         case "Foot":
             switch (secondLengthChoice.value) {
                 case "Inch": changedLength = val * 12; break;
@@ -81,7 +81,6 @@ submit.onclick = function () {
             }
             break;
 
-        // ------------------ YARD ------------------
         case "Yard":
             switch (secondLengthChoice.value) {
                 case "Inch": changedLength = val * 36; break;
@@ -97,7 +96,6 @@ submit.onclick = function () {
             }
             break;
 
-        // ------------------ MILE ------------------
         case "Mile":
             switch (secondLengthChoice.value) {
                 case "Inch": changedLength = val * 63360; break;
@@ -111,7 +109,6 @@ submit.onclick = function () {
             }
             break;
 
-        // ------------------ MILLIMETER ------------------
         case "MM":
             switch (secondLengthChoice.value) {
                 case "Inch": changedLength = val / 25.4; break;
@@ -125,7 +122,6 @@ submit.onclick = function () {
             }
             break;
 
-        // ------------------ CENTIMETER ------------------
         case "CM":
             switch (secondLengthChoice.value) {
                 case "Inch": changedLength = val / 2.54; break;
@@ -139,7 +135,6 @@ submit.onclick = function () {
             }
             break;
 
-        // ------------------ METER ------------------
         case "Meter":
             switch (secondLengthChoice.value) {
                 case "Inch": changedLength = val * 39.37; break;
@@ -153,7 +148,6 @@ submit.onclick = function () {
             }
             break;
 
-        // ------------------ KILOMETER ------------------
         case "KM":
             switch (secondLengthChoice.value) {
                 case "Inch": changedLength = val * 39370; break;

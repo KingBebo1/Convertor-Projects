@@ -1,0 +1,32 @@
+body{
+    text-align: center;
+    font-size: 2rem;
+}
+#timeContainer{
+    background-color: gray;
+    width: 90%;
+    height: 90%;
+    margin-left: 50px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px 2px;
+}
+input{
+    font-size: 1.3rem;
+}
+select{
+    font-size: 2rem;
+}
+button{
+    font-size: 4rem;
+    background-color: hsl(180, 100%, 50%);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+p{
+    color: white;
+}
+button:active{
+    background-color: hsl(180, 100%, 40%);
+}
