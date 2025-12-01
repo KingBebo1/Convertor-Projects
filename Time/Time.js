@@ -19,6 +19,7 @@ Submit.onclick = () => {
                 case "Month": changedTime = val / 2.628e+6; break;
                 case "Years": changedTime = val / 3.154e+7; break;
             }
+            break;
         case "Minutes":
             switch(To.value){
                 case "Seconds": changedTime = val * 60; break;
@@ -29,6 +30,7 @@ Submit.onclick = () => {
                 case "Month": changedTime = val / 43800; break;
                 case "Years": changedTime = val / 525600; break;
             }
+            break;
         case "Hours":
             switch(To.value){
                 case "Seconds": changedTime = val * 3600; break;
@@ -39,6 +41,7 @@ Submit.onclick = () => {
                 case "Month": changedTime = val / 730; break;
                 case "Years": changedTime = val / 8760; break;
             }
+            break;
         case "Days":
             switch(To.value){
                 case "Seconds": changedTime = val * 86400; break;
@@ -49,6 +52,7 @@ Submit.onclick = () => {
                 case "Month": changedTime = val / 30.417; break;
                 case "Years": changedTime = val / 365; break;
             }
+            break;
         case "Weeks":
             switch(To.value){
                 case "Seconds": changedTime = val * 604800; break;
@@ -59,6 +63,7 @@ Submit.onclick = () => {
                 case "Month": changedTime = val / 4.345; break;
                 case "Years": changedTime = val / 52.143; break;
             }
+            break;
         case "Month":
             switch(To.value){
                 case "Seconds": changedTime = val * 2.628e+6; break;
@@ -69,6 +74,7 @@ Submit.onclick = () => {
                 case "Month": changedTime = val; break;
                 case "Years": changedTime = val /12; break
             }
+            break;
         case "Years":
             switch(To.value){
                 case "Seconds": changedTime = val * 3.154e+7; break;
@@ -79,6 +85,7 @@ Submit.onclick = () => {
                 case "Month": changedTime = val * 12; break;
                 case "Years": changedTime = val; break;
             }
+            break;
     }
 
     Display.textContent = changedTime;
