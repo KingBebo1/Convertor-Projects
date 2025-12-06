@@ -29,6 +29,23 @@
         #Gmail{
             font-size: 2rem;
         }
+        .converter-list {
+    column-count: 2;
+    column-gap: 60px;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+.converter-list > div {
+    break-inside: avoid;
+    margin-bottom: 40px;
+}
+
+.column-break {
+    break-after: column;
+}
+
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -36,16 +53,38 @@
     <h1><u><i><b>Convertor Home Page</b></i></u></h1>
 
 
-    <a href="Temperature/Temp.html"><button>🌡️</button></a><br>
-    <h3>Temeperature </h3><br><br><br>
-    <a href="Weight/Weight.html"><button>⚖️</button></a><br>
-    <h3>Weight</h3><br><br><br>
-    <a href="Length/Length.html"><button>📏</button></a>
-    <h3>Length</h3><br><br><br>
-    <a href="Time/Time.html"><button>🕰️</button></a>
-    <h3>Time</h3><br><br><br>
-    <a href="Area/area.html"><button>📐</button></a>
-    <h3>Area</h3><br><br><br>
+   <div class="converter-list">
+    <div>
+        <a href="Temperature/Temp.html"><button>🌡️</button></a>
+        <h3>Temperature</h3>
+    </div>
+
+    <div>
+        <a href="Weight/Weight.html"><button>⚖️</button></a>
+        <h3>Weight</h3>
+    </div>
+
+    <div>
+        <a href="Length/Length.html"><button>📏</button></a>
+        <h3>Length</h3>
+    </div>
+
+    <div>
+        <a href="Time/Time.html"><button>🕰️</button></a>
+        <h3>Time</h3>
+    </div>
+
+    <div>
+        <a href="Area/area.html"><button>📐</button></a>
+        <h3>Area</h3>
+    </div>
+
+    <div class="column-break"></div>
+
+        
+</div>
+
+
     <hr>
 
     <footer>
